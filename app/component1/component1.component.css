@@ -16,7 +16,7 @@ body {
 
 .green.k-dropdown .k-dropdown-wrap 
 {
-  transform: translate(30px,0px);
+  transform: translate(200px,0px);
   background: transparent !important;
     border: none  !important;
     box-shadow: none  !important;
