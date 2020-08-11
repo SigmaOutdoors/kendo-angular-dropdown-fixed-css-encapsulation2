@@ -1,0 +1,8 @@
+    <div class="example-wrapper">
+      <h3>Component 2 - ViewEncapsulation not set (default)</h3>
+      <span>Why are my styles effected by Comp1's ViewEncapsulation.None?  I would expect this component to have the "default" Kendo css settings.  I have tried setting ViewEncapsulation to every value possible in this component, but I still get odd results.</span>
+      <p></p>
+      <p>Another dropdown</p>
+      <kendo-dropdownlist class="red" [data]="listItems2"       (selectionChange)="selectionChange($event)"   [defaultItem]="'one'" [popupSettings]="{ height: 200, width: 200  }" >
+      </kendo-dropdownlist>
+    </div>

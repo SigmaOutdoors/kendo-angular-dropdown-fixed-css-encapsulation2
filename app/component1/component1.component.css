@@ -1,0 +1,40 @@
+p { color : red}
+
+body {
+  color: yellow;
+}
+ .example-wrapper {
+   background : black;
+ }
+ .green .k-input  {
+  color : green !important;
+  height: 10px !important;
+  font-size: 10px !important;
+  /* when you squish the font and dropdown height, teh text gets skewed in the dropdown, so readjust it to center */
+  transform: translateY(.3em);
+}
+
+.green.k-dropdown .k-dropdown-wrap 
+{
+  transform: translate(30px,0px);
+  background: transparent !important;
+    border: none  !important;
+    box-shadow: none  !important;
+    /*
+    */
+    width : 100px;
+   
+}
+/* does nothing 
+.k-animation-container .k-animation-container-shown {
+  font-size: 10px !important;
+  background: purple !important;
+  color : blue !important;
+} */
+
+.myPopupClass {
+  background: red;
+  margin: 0px;
+  font-size: 10px;
+  
+}
