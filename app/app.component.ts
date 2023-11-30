@@ -1,19 +1,15 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
 
   selector: 'my-app',
   styleUrls: ['./app.component.css'],
   template: `
-    
-    <div class="container">
-    <a routerLinkActive="active" 
-       routerLink="comp1">Comp1</a> |
-    <a routerLinkActive="active" 
-       routerLink="comp2">Comp2</a> |          
+  <h1>test</h1>
+    <a  routerLink="comp1">Comp1</a> |
+    <a routerLink="comp2">Comp2</a> |          
     <router-outlet></router-outlet>
-    
-  </div>
   `
 })
 /**
@@ -21,11 +17,9 @@ import { Component, ViewEncapsulation } from '@angular/core';
  */
 export class AppComponent {
 
-
-
-  selectionChange(newSelection)
+  constructor(private router: Router)
   {
-    console.log('newSelection =' + newSelection);
+      router.navigate(['comp1']);
   }
 
 }

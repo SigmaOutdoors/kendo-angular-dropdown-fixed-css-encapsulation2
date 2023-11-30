@@ -14,7 +14,6 @@ import { Component1Component } from './component1/component1.component';
 @NgModule({
   imports:      [ BrowserModule, BrowserAnimationsModule, DropDownsModule, 
    RouterModule.forRoot([
-      { path: 'appcomp', component: AppComponent },  
       { path: 'comp2', component: Component2Component },
       { path: 'comp1', component: Component1Component },      
       { path: '**', redirectTo: 'appcomp' }
