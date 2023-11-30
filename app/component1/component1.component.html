@@ -1,9 +1,11 @@
   
     <div class="example-wrapper">
       <h3>Component 1 - ViewEncapsulation.None</h3>
-         <span>I have set things like .k-dropdown in this component's css, why is applying to component 2???   In my bigger apps I am noticing that if I set ANY CSS for Kendo in a component that has ViewEncapsulation.None, subsequent components get that css and I cannot override it even non-kendo components. Also I cannot override the css here from what was set in Comp1 (see this component's css), this components css is ignored.  Like it knows I have the encapsulation right, but it reads the css set from Comp1 </span>
+         <span>To override Kendo Components you DO NOT override their classes or they will apply to ALL components that get loaded later in the application!  You need to define you're own class (see the class="green" in this HTML) which overrides the dropdown below and then use the proper selectors to change it. That keeps styles contained to this component.    </span>
          <span style="color:red;background:yellow">Go click Comp2 above</span>
          <p></p>
-      <p>T-shirt size:</p> <kendo-dropdownlist class="green" [data]="listItems"  (selectionChange)="selectionChange($event)"  [defaultItem]="'Large'" [popupSettings]="{ popupClass: 'myPopupClass' }">
+      <p>T-shirt size:</p> 
+      <!-- class="green" is what allows you to override the kendo default styles see .scss file  -->
+      <kendo-dropdownlist class="green" [data]="listItems" (selectionChange)="selectionChange($event)"  [defaultItem]="'Large'" [popupSettings]="{ popupClass: 'myPopupClass' }">
       </kendo-dropdownlist>    
     </div>

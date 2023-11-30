@@ -1,18 +1,21 @@
 p { color : red}
 
+h1 {
+  color : black;
+}
+
 body {
   color: yellow;
 }
  .example-wrapper {
    background : black;
  }
+ 
  .green .k-input  {
   color : green !important;
   height: 20px !important;
   font-size: 10px !important;
-
-  /* when you squish the font and dropdown height, teh text gets skewed in the dropdown, so readjust it to center */
-  transform: translateY(.3em);
+ // transform: translate(10px,0px);
 }
 
 .green.k-dropdown .k-dropdown-wrap 
