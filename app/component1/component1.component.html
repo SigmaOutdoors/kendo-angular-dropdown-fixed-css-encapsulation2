@@ -1,11 +1,47 @@
-  
-    <div class="example-wrapper">
-      <h3>Component 1 - ViewEncapsulation.None</h3>
-         <span>To override Kendo Components you DO NOT override their classes or they will apply to ALL components that get loaded later in the application!  You need to define you're own class (see the class="green" in this HTML) which overrides the dropdown below and then use the proper selectors to change it. That keeps styles contained to this component.    </span>
-         <span style="color:red;background:yellow">Go click Comp2 above</span>
-         <p></p>
-      <p>T-shirt size:</p> 
-      <!-- class="green" is what allows you to override the kendo default styles see .scss file  -->
-      <kendo-dropdownlist class="green" [data]="listItems" (selectionChange)="selectionChange($event)"  [defaultItem]="'Large'" [popupSettings]="{ popupClass: 'myPopupClass' }">
-      </kendo-dropdownlist>    
-    </div>
+<div class="example-wrapper">
+  <h3>Component 1 - ViewEncapsulation.None</h3>
+  <span
+    >To override Kendo Components you DO NOT override their classes or they will
+    apply to ALL components that get loaded later in the application! You need
+    to define you're own class (see the class="green" in this HTML) which
+    overrides the dropdown below and then use the proper selectors to change it.
+    That keeps styles contained to this component.
+  </span>
+  <span style="color:red;background:yellow">Go click Comp2 above</span>
+  <p></p>
+  <p>T-shirt size:</p>
+  <!-- class="green" is what allows you to override the kendo default styles see .scss file  -->
+  <kendo-dropdownlist
+    class="green"
+    [data]="listItems"
+    (selectionChange)="selectionChange($event)"
+    [defaultItem]="'Large'"
+    [popupSettings]="{ popupClass: 'myPopupClass' }"
+  >
+  </kendo-dropdownlist>
+</div>
+
+<kendo-window
+  #cdwin
+  *ngIf="showModal"
+  class="my-window"
+  [minWidth]="500"
+  [minHeight]="500"
+  [width]="500"
+  [resizable]="true"
+  [top]="85"
+  [left]="25"
+  (close)="showModal = false"
+>
+  <kendo-window-titlebar>
+    <span class="k-window-title">My Modal</span>
+    <button kendoWindowCloseAction></button>
+  </kendo-window-titlebar>
+  class="my-window" on &lt;kendo-window> tag the is what is making this background window color and then using that as a pre-selector keeps the css encapsulated to this control.  To test you should be able to make another window in comp2 with the default properties and it should NOT be orange.
+  <p>
+ <pre>
+.my-window.k-window &#123;
+  background-color: orange;
+&#125;  
+ </pre>
+</kendo-window>
