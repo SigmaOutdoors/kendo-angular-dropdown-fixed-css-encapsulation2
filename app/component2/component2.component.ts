@@ -10,7 +10,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
  encapsulation: ViewEncapsulation.None
 })
 export class Component2Component implements OnInit {
-
+ public showModal2 = true;
   public listItems2: Array<string> = ["one", "two", "three", "four"];
   constructor() { }
 

@@ -6,3 +6,28 @@
       <kendo-dropdownlist class="red" [data]="listItems2"       (selectionChange)="selectionChange($event)"   [defaultItem]="'one'" [popupSettings]="{ height: 200, width: 200  }" >
       </kendo-dropdownlist>
     </div>
+
+
+  <kendo-window
+  #cdwin
+  *ngIf="showModal2"
+  [minWidth]="500"
+  [minHeight]="500"
+  [width]="500"
+  [resizable]="true"
+  [top]="85"
+  [left]="25"
+  (close)="showModal2 = false"
+>
+  <kendo-window-titlebar>
+    <span class="k-window-title">My Modal COMP2</span>
+    <button kendoWindowCloseAction></button>
+  </kendo-window-titlebar>
+  this mocal has no class="my-window" on &lt;kendo-window> tag so should be default white
+  <p>
+ <pre>
+.my-window.k-window &#123;
+  background-color: orange;
+&#125;  
+ </pre>
+</kendo-window>
