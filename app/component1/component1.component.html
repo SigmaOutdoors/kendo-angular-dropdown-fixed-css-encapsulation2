@@ -15,7 +15,7 @@
     class="green"
     [data]="listItems"
     (selectionChange)="selectionChange($event)"
-    [defaultItem]="'Large'"
+    [defaultItem]="listItems[2]"
     [popupSettings]="{ popupClass: 'myPopupClass' }"
   >
   </kendo-dropdownlist>
@@ -45,3 +45,6 @@
 &#125;  
  </pre>
 </kendo-window>
+
+<button (click)="onClick()">Load Dropdown Data</button>
+<button (click)="showTheModal()">Show Modal with Override CSS</button>
