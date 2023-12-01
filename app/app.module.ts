@@ -11,9 +11,10 @@ import { AppComponent }   from './app.component';
 import { Component2Component } from './component2/component2.component';
 import { Component1Component } from './component1/component1.component';
 import { WindowModule } from '@progress/kendo-angular-dialog';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  imports:      [ BrowserModule, BrowserAnimationsModule, WindowModule, DropDownsModule, 
+  imports:      [ BrowserModule, BrowserAnimationsModule, WindowModule, DropDownsModule, FormsModule,
    RouterModule.forRoot([
       { path: 'comp2', component: Component2Component },
       { path: 'comp1', component: Component1Component },      

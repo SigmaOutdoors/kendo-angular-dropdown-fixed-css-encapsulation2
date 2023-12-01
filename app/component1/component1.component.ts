@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-component1',
@@ -8,19 +9,23 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class Component1Component implements OnInit {
   public showModal = false;
-  public listItems: Array<string> = []; // = ["X-Small", "Small", "Medium", "Large", "X-Large", "2X-Large"];
+  public listItems: Array<string> = []; 
   constructor() { }
 
+  public comboBoxControl = new FormControl(); // Initialize without a value
+  public selectedValue = "";
   ngOnInit() {
   }
 
   public onClick()
   {
     this.listItems =  ["X-Small", "Small", "Medium", "Large", "X-Large", "2X-Large"];
+
+    this.selectedValue = this.listItems[2];
   }
 
   public showTheModal()
   {
-    this.showModal = true;  //test
+    this.showModal = true;  //test2
   }
 }
